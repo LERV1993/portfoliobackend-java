@@ -18,7 +18,7 @@ public class BackendApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**");
+                registry.addMapping("/**").allowedOrigins("https://hosting-angular-dfad0.web.app").allowedMethods("*").allowedHeaders("*");
             }
         };
     }
